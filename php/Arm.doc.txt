@@ -1,0 +1,23 @@
+<- Arm ------------------------------------------------------------------------
+The iArm interface handles the properties of the ships.
+
+It contains the following properties:
+ - name: nome of the weapon,
+ - loads: office,
+ - range_short: its short-range unit,
+ - range_interm: a unit of intermediate-range
+ - range_long: its long-range unit,
+ - effect_zone: the area of ​​effect with the following values​​.
+   --> Still for tirrer
+   --> Recovery in affected
+   --> All directions, row, column, both
+   --> Vessel width X (width)
+   --> Y vessel width (length)
+   --> Shot forward
+   --> Shot to right
+   --> Shot down
+   --> Shot to the left
+   --> Deflagration X (width)
+   --> Blast Y (length)
+   --> Tables for behavior with the same method as the shot
+------------------------------------------------------------------------ Arm ->

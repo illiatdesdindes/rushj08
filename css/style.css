@@ -1,0 +1,86 @@
+
+body {
+	background-color: #fff;
+	font-family: 'Brush Script MT', Arial;
+	cursor: default;
+}
+#title {
+	font-size: 5rem;
+	text-align: center;
+	text-shadow: 1px 1px 3px #888;
+	color: #34495e;
+}
+#game {
+	overflow: hidden;
+	margin: 1rem auto 1.5rem;
+	width: calc(0.81rem * 150 + 1px);
+	box-shadow: 0px 0px 30px #888;
+	box-sizing: border-box;
+	border: 1px solid grey;
+}
+#game div.cadre {
+	clear: both;
+	width: calc(0.81rem * 150);
+	height: 0.81rem;
+	background-color: rgba(189, 195, 199, 1);
+	border-right: 1px solid grey;
+}
+#game div.cadre div {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: calc(0.81rem - 2px);
+	height: calc(0.81rem - 2px);
+	background-color: rgba(189, 195, 199, 0);
+	border: 1px solid grey;
+}
+#game div.cadre .fire {
+	background-color: #333;
+	box-shadow: 0px 0px 10px #333;
+}
+#game div.cadre .select {
+	background-color: #c0392b;
+	box-shadow: 0px 0px 10px #c0392b;
+}
+#game div.cadre .destroy {
+	background-color: #888;
+	box-shadow: 0px 0px 10px #888;
+}
+#game div.cadre .asteroid {
+	background-color: #2980b9;
+	box-shadow: 0px 0px 10px #2980b9;
+}
+#ctrl {
+	position: fixed;
+	bottom: 2rem;
+	right: 2.5rem;
+	opacity: 0.75;
+	font-size: 1.5rem;
+	width: 450px;
+	height: 9.7rem;
+	margin: 0 auto;
+	padding: 0.5rem 1rem 1.3rem 1.5rem;
+	border: 2px solid #ddd;
+	box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.5);
+	box-sizing: border-box;
+	border-radius: 1rem;
+	background-image: url('http://www.twitterevolutions.com/bgs/ice-hockey-twitter-background.jpg');
+	background-position: center left;
+}
+#ctrl #add {
+	float: right;
+	width: 7rem;
+	padding-bottom: 3rem;
+	text-align: center;
+}
+#ctrl #add div {
+	width: 100%;
+	padding: 0rem 0 0.5rem;
+	text-align: center;
+}
+#ctrl img {
+	vertical-align: middle;
+}
+#ctrl img:nth-child(1) {
+	margin-top: 0.7rem;
+}
