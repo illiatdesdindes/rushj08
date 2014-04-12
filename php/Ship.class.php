@@ -8,21 +8,34 @@ abstract class Ship {
 
 	use Direction;
 
-	public	$x;
-	public	$y;
-	public	$name; 
-	public 	$size;
-	public 	$hull;
-	public 	$pp;
-	public 	$speed;
-	public 	$operate;
-	public 	$shield;
-	public	$arms;
+	protected	$_x;
+	protected	$_y;
+	protected	$_name; 
+	protected	$_size;
+	protected	$_hull;
+	protected	$_pp;
+	protected	$_speed;
+	protected	$_operate;
+	protected	$_shield;
+	protected	$_arms = [];
 
 	public function __construct($shipName, $x, $y, $direction, array $arms) {
-		$this->name			= $shipName;
-		$this->arms			= $arms;
+		$this->_x			= $x;
+		$this->_y			= $y;
+		$this->_name		= $shipName;
+		$this->_arms		= $arms;
 		$this->_direction	= $direction;
+	}
+
+	public function draw() {
+		$width = $this->_size[0] * (11 + 1) - 1;
+		$height = $this->_size[1] * (11 + 1) - 1;
+		$left = ($this->_x) * 12;
+		$top = ($this->_y) * 12 ;
+		echo "
+			<div class='ship' style='width:$width;height:$height;top:$top;left:$left;margin-bottom:-$height'>
+			</div>
+		";
 	}
 }
 
