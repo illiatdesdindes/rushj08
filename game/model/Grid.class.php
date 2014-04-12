@@ -27,8 +27,6 @@ class Grid{
 		while($i < (self::$height * self::$width))
 		{	
 			echo '<div class="cadre">';
-			foreach ($this->_ships as $ship) 
-				$ship->draw();
 			$j = 0;
 			while($j < self::$width)
 			{

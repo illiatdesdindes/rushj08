@@ -3,7 +3,6 @@
 require_once('Arm.class.php');
 require_once('Direction.trait.php');
 
-
 abstract class Ship {
 
 	use Direction;
@@ -24,16 +23,17 @@ abstract class Ship {
 		$this->_y			= $y;
 		$this->_name		= $shipName;
 		$this->_arms		= $arms;
-		$this->_direction	= $direction;
+		$this->setDirection($direction);
 	}
 
 	public function draw() {
 		$width = $this->_size[0] * (11 + 1) - 1;
 		$height = $this->_size[1] * (11 + 1) - 1;
-		$left = ($this->_x) * 12;
-		$top = ($this->_y) * 12 ;
+		$left = ($this->_x - $this->getHalfX()) * 12;
+		$top = ($this->_y - $this->getHalfY()) * 12 ;
 		echo "
 			<div class='ship' style='width:$width;height:$height;top:$top;left:$left;margin-bottom:-$height'>
+			$this->_name
 			</div>
 		";
 	}
