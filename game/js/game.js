@@ -38,6 +38,7 @@ game.controller('ShipsCtrl', function($scope, $http, $sce){
 					$scope.selected.height = data.height;
 					$scope.selected.life = data.life;
 					$scope.selected.alive = data.alive;
+					$scope.selected.turn = null;
 				});
 	};
 	$scope.fire = function(ship) {
