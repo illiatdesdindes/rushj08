@@ -19,7 +19,7 @@ game.controller('ShipsCtrl', function($scope, $http, $sce){
 		
 	};
 	$scope.move = function(ship) {
-		var data = {turn:"left", distance: ship.move};
+		var data = {id:ship.id, turn:"left", distance: ship.move};
 		$http.post('/game/controller/mouvement.php', data)
 				.success();
 	};
