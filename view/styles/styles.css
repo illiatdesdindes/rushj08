@@ -54,10 +54,16 @@ border: 1px solid #75A0B0;
 padding: 3px;
 text-decoration: none;
 color: #75A0B0;
-display: block;
+display: inline;
 background-color: #0C313F;
 }
 .menu-vertical-simple-2 li a:hover 
 {
-background: #d40203;
+background: #265061;
 }
+form{
+	color:#75A0B0;
+	margin:auto;
+	text-align:center; 
+}
+

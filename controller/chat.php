@@ -1,4 +1,5 @@
 <?php session_start();
+include '../controller/check_login.php';
 if (!file_exists("chat"))
 touch("chat");
 $to_lock = fopen("chat","r");
