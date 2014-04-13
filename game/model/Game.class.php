@@ -1,6 +1,5 @@
 <?php
 
-
 class Game {
 
 	private	$_x;
@@ -34,6 +33,11 @@ class Game {
 			$shipsHash[] = $ship->toHash();
 		return $shipsHash;
 	}
+
+	public function getShips(){
+		return $this->_ships;
+	}
+	
 }
 
 ?>
