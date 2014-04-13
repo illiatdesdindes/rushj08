@@ -1,0 +1,21 @@
+html
+{
+background-image:url('/view/img/back.jpg');
+background-repeat:no-repeat;
+background-position:center center;
+background-attachment:fixed;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+#title_td_index
+{
+	font:oblique 50px Arial, Helvetica, sans-serif;
+	color:white;
+}
+
+p
+{
+	color:white;
+}

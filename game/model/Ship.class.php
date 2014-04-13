@@ -7,6 +7,7 @@ abstract class Ship {
 
 	use Direction;
 
+	protected	$_id;
 	protected	$_x;
 	protected	$_y;
 	protected	$_name; 
@@ -19,6 +20,7 @@ abstract class Ship {
 	protected	$_arms = [];
 
 	public function __construct($shipName, $x, $y, $direction, array $arms) {
+		$this->_id			= uniqid();
 		$this->_x			= $x;
 		$this->_y			= $y;
 		$this->_name		= $shipName;
@@ -44,7 +46,8 @@ abstract class Ship {
 		$top = ($this->_y - $this->getHalfY()) * 12 ;
 		return ['width' => $width,'height' => $height,
 			'top' => $top,'left' => $left,
-			'name' => $this->_name
+			'name' => $this->_name,
+			'id' => $this->_id
 			];
 	}
 
