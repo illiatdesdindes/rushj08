@@ -39,7 +39,10 @@ class Game {
 	public function getShips(){
 		return $this->_ships;
 	}
-	
+	public static function doc(){
+		echo file_get_contents('Game.doc.txt');
+		return ;
+	}	
 	public function getShipId($id){
 		$ships = $this->getShips();
 		foreach ($ships as &$ship){

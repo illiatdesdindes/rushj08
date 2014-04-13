@@ -1,0 +1,5 @@
+<-- ArmLn -----------------------------------------------------------
+
+The ArmLn Class create the specifications of the ship weapons, 
+No procrastination with this one !
+----------------------------------------------------------- ArmLn -->

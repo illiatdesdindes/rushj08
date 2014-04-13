@@ -39,9 +39,11 @@ abstract class Arm {
 		}
 	}
 
+	public static function doc(){
+		echo file_get_contents('Arm.doc.txt');
+		return ;
+	}
 }
-
-
 
 /*
 class ArmBldf	implements iArm

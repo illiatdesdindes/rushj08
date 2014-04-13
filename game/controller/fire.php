@@ -6,4 +6,5 @@ $ret = json_decode(file_get_contents("php://input"), true);
 $game = new Game();
 $ship = $game->getShipId($ret['id']);
 $ship->fire($game->getShips());
+echo json_encode($game->toHash());
 ?>

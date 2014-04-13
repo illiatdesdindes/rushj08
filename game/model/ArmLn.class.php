@@ -12,6 +12,10 @@ class ArmLn extends Arm{
 		$this->_range_long 		= array(61, 90);
 		$this->_ship			= $ship;
 	}
+	public static function doc(){
+		echo file_get_contents('ArmLn.doc.txt');
+		return ;
+	}
 }
 
 ?>

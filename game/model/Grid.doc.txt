@@ -1,0 +1,8 @@
+<-- Grid -----------------------------------------------------------------
+The Grid Class create and draw the game grid with cell from the Cell Class.
+for more informations, consulte the Cell Class documentation.
+The methods available are :
+ - register 
+ - draw
+
+ ------------------------------------------------------------------ Grid -->
