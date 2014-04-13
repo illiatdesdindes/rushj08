@@ -12,8 +12,8 @@ abstract class Ship {
 	protected	$_y;
 	protected	$_name; 
 	protected	$_size;
-	protected	$_hull;
-	protected	$_pp;
+	protected	$_life;
+	protected	$_power;
 	protected	$_speed;
 	protected	$_operate;
 	protected	$_shield;
@@ -22,6 +22,7 @@ abstract class Ship {
 
 
 	public function __construct($shipName, $x, $y, $direction, array $arms, $team) {
+		$this->_id			= uniqid();
 		$this->_x			= $x;
 		$this->_y			= $y;
 		$this->_name		= $shipName;
@@ -49,7 +50,9 @@ abstract class Ship {
 		return ['width' => $width,'height' => $height,
 			'top' => $top,'left' => $left,
 			'name' => $this->_name,
-			'id' => $this->_id
+			'id' => $this->_id,
+			'speed' => $this->_speed,
+			'move' => 0
 			];
 	}
 

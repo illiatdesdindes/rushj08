@@ -1,15 +1,15 @@
 <?php
- include "../controller/check_login.php";
-require_once('../model/ImperialFrigate.class.php');
-$ship = new ImperialFrigate('Hammer justice', 4, 1, Direction::$LEFT, []);
-$ship2 = new ImperialFrigate('truc mush', 4, 6, Direction::$DOWN, []);
-//$ship->draw();
-//$ship2->draw();
 
-echo json_encode([
-					$ship->toHash(),
-					$ship2->toHash()
-				]);
+include "../../controller/check_login.php";
+require_once('../model/Game.class.php');
+require_once('../model/ImperialFrigate.class.php');
+$game = new Game();
+$game->push(new ImperialFrigate('Hammer justice', 4, 1, Direction::$LEFT, []));
+$game->push(new ImperialFrigate('truc mush', 4, 6, Direction::$DOWN, []));
+
+
+
+echo json_encode($game->toHash());
 
 ?>
 
