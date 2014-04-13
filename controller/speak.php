@@ -1,4 +1,5 @@
 <?php session_start();
+include '../controller/check_login.php';
 date_default_timezone_set('Europe/Paris');
 $to_lock = fopen("chat","a");
 if ($_SESSION['id_user'] != "" OR $_SESSION OR $_SESSION == TRUE){

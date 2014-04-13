@@ -1,8 +1,8 @@
 <?php session_start();
 $msg = "";
-if ($_POST['submit'] == "Creer un compte")
+if (isset($_POST['submit']) && $_POST['submit'] == "Creer un compte")
 header ('Location: ../controller/Adduser.class.php');
-if ($_POST['submit'] == "Se connecter"){
+if (isset($_POST['submit']) && $_POST['submit'] == "Se connecter"){
 
 	class User
 	{
