@@ -1,8 +1,8 @@
 <?php
 
-require_once('ArmLn.class.php');
+require_once('Arm.class.php');
 
-class ArmLn {
+class ArmLn extends Arm{
 	public function __construct(&$ship) {
 		$this->_name			= 'Lance navale';
 		$this->_loads			= 5;

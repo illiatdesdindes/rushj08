@@ -14,7 +14,7 @@ abstract class Arm {
 	protected	$_effect_zone;
 
 	public function fire($myShip, $ships) {
-		foreach($ships as $ship) {
+		foreach($ships as &$ship) {
 			if ($myShip != $ship) {
 				$this->hit($myShip, $ship);
 			}
@@ -32,7 +32,10 @@ abstract class Arm {
 			if ($dir == Direction::$LEFT)
 				$hit = $foeShip->collide($myShip->getX() - $i, $myShip->getY());
 			if ($hit)
+			{
 				$foeShip->takeDamage($this->_loads);
+				return ;
+			}
 		}
 	}
 

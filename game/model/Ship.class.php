@@ -1,6 +1,6 @@
 <?php
 
-require_once('Arm.class.php');
+require_once('ArmLn.class.php');
 require_once('Direction.trait.php');
 
 abstract class Ship {
@@ -35,19 +35,34 @@ abstract class Ship {
 	public function getId() {
 		return $this->_id;
 	}
-
+	public function getX() {
+		return $this->_x;
+	}
+	public function getY() {
+		return $this->_y;
+	}
 	public function fire($ships) {
 		$this->_arm->fire($this, $ships);
 	}
 
 	public function collide($x, $y) {
-		return false;
+		$ox = $this->_x - $this->getHalfX();
+		$oy = $this->_y - $this->getHalfY();
+		$w = $this->_size[0];
+		$h = $this->_size[1];
+		if ($x >= $ox 
+			&& $x < $ox + $w
+			&& $y >= $oy 
+			&& $y < $oy + $h)
+			return true;
+		else
+			return false;
 	}
 
 	public function takeDamage($damage) {
-		$this->_live -= $damage;
-		if ($this->_live <= 0) {
-			$this->_live = 0;
+		$this->_life -= $damage;
+		if ($this->_life <= 0) {
+			$this->_life = 0;
 			$this->_alive = false;
 		}	
 	}

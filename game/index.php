@@ -9,6 +9,7 @@ include '../controller/check_login.php' ?>
 </head>
 <body >
 	<div id="title">Awesome Starships Battles II</div>
+	<a href="reset.php" style="text-align:center:color:grey;">reset game</a>
 	<div id="game" ng-controller='ShipsCtrl'>
 		<div ng-repeat="ship in ships" >
 			<div 	class='ship' 
