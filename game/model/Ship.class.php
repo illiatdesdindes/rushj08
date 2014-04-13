@@ -55,7 +55,10 @@ abstract class Ship {
 			'move' => 0
 			];
 	}
-
+	public static function doc(){
+		echo file_get_contents('Ship.doc.txt');
+		return ;
+	}
 }
 
 /*

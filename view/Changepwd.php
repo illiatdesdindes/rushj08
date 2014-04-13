@@ -9,16 +9,17 @@
 		<title>Awesome Starships Battles II</title>
 	</head>
 	<body>
+	<div id="title">Awesome Starships Battles II</div>
 			<ul class="menu-vertical-simple-2">
 				<li class="bouton_gauche"><a href="index.php">ACCUEIL</a></li>
-				<li class="bouton_gauche"><a href="../game/index.php">LANCER NOUVELLE PARTIE</a></li>
+				<li class="bouton_gauche"><a href="../game/menu.php">NOUVELLE PARTIE</a></li>
 				<li class="bouton_gauche"><a href="../view/chat.php">CHAT</a></li>
 				<li class="bouton_gauche"><a href="../controller/ChangePwd.class.php">MODIF MDP</a></li>
 				<li class="bouton_gauche"><a href="../controller/deco.php">DECO</a></li>
 
 			</ul>
-		<form method=POST action="../controller/ChangePwd.class.php">
-			<table border=0 align=center style="margin-top: 15%;">
+		<form class="login" method=POST action="../controller/ChangePwd.class.php">
+			<table>
 			<tr>
 					<td align=center id="title_td_index" colspan="2"><?php echo $msg;?></td>
 				</tr>

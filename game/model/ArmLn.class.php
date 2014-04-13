@@ -11,6 +11,10 @@ class ArmLn {
 			array(0, 0, 0, 0)
 		);
 	}
+	public static function doc(){
+		echo file_get_contents('ArmLn.doc.txt');
+		return ;
+	}
 }
 
 ?>

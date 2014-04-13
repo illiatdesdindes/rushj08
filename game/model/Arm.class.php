@@ -9,9 +9,12 @@ abstract class Arm {
 	public	$range_interm;
 	public	$range_long;
 	public	$effect_zone;
+
+	public static function doc(){
+		echo file_get_contents('Arm.doc.txt');
+		return ;
+	}
 }
-
-
 
 /*
 class ArmBldf	implements iArm

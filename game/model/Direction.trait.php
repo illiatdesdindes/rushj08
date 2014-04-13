@@ -63,7 +63,10 @@ trait Direction {
 			return $half;
 		return 	round($half) - 1;
 	}
-
+	public static function doc(){
+		echo file_get_contents('Direction.doc.txt');
+		return ;
+	}
 }
 
 ?>

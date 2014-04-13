@@ -9,8 +9,9 @@
 		<title>Awesome Starships Battles II</title>
 	</head>
 	<body>
-		<form method=POST action="../controller/Adduser.class.php">
-			<table border=0 align=center style="margin-top: 15%;">
+	<div id="title">Awesome Starships Battles II</div>
+		<form class="login"  method=POST action="../controller/Adduser.class.php">
+			<table>
 			<tr>
 					<td align=center id="title_td_index" colspan="2"><?php echo $msg;?></td>
 				</tr>

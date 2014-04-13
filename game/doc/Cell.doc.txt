@@ -1,6 +1,0 @@
-<- Cell -------------------------------------------------------------------
-The Cell class contruct elements of the form: <div class="content">
-The content by deefault is the string "empty".
-------------------------------------------------------------------- Cell ->
-
-

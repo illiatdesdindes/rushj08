@@ -66,5 +66,8 @@ body {
 	bottom:0px;
 	left:0px;
 	right:0px;
+	margin-bottom:25%;
 }
-
+form{
+	width: 13%;
+}

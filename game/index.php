@@ -24,7 +24,7 @@ include '../controller/check_login.php' ?>
 		?>
 	
 		<div id="ctrl" ng-show="selected.id">
-			<h3>Selected Ship : {{selected.name}}</h3>
+			<h4>Selected Ship : {{selected.name}}</h4>
 			<form name="ctrl" action="" method="post">
 				<fieldset>
 					<legend>Direction</legend>
@@ -35,14 +35,14 @@ include '../controller/check_login.php' ?>
 					<input type="button" value="turn left" ng-click="turnleft(selected)"/>
 		   			<input type="range" max="{{selected.speed}}" ng-model="selected.move">
 					<input type="button" value="turn right" ng-click="turnright(selected)"/>
-					<input type="button" value="MOVE" ng-click="move(selected)"/>
+					<br /><input type="button" value="MOVE" ng-click="move(selected)"/>
 
 	 			</fieldset>
 			</form>
 			<form>
 				<fieldset>
 					<legend>Fire</legend>
-					<h4>Do you want to fire ?</h4>
+				<span>Do you want to fire ?<span>
 					<input type="button" value="FIRE" ng-click="fire(selected)"/>
 				</fieldset>
 			</form>

@@ -16,6 +16,10 @@ class ImperialFrigate extends Ship {
 		$this->_shield	= 0;
 		parent::__construct($shipName, $x, $y, $direction, $arms, $team);
 	}
+	public static function doc(){
+		echo file_get_contents('ImperialFrigate.doc.txt');
+		return ;
+	}
 }
 
 ?>
