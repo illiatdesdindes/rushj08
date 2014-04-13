@@ -37,6 +37,17 @@ abstract class Ship {
 			</div>
 		";
 	}
+	public function toHash() {
+		$width = $this->_size[0] * (11 + 1) - 1;
+		$height = $this->_size[1] * (11 + 1) - 1;
+		$left = ($this->_x - $this->getHalfX()) * 12;
+		$top = ($this->_y - $this->getHalfY()) * 12 ;
+		return ['width' => $width,'height' => $height,
+			'top' => $top,'left' => $left,
+			'name' => $this->_name
+			];
+	}
+
 }
 
 /*
