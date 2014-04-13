@@ -2,7 +2,7 @@
 if (file_exists("../controller/void") == TRUE)
 	include("../view/install.php");
 else{
-if (isset($_SESSION) AND $_SESSION['id_user'] AND $_SESSION['role'])
+if (isset($_SESSION) AND isset($_SESSION['id_user']) AND isset($_SESSION['role']))
 include("../view/home.php");
 else
 include("../view/index.php");
