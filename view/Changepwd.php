@@ -26,13 +26,13 @@
 					<td align=center id="title_td_index" colspan="2">Changement de mot de passe</td>
 				</tr>
 				<tr>
-				<td align=center colspan="2"><input class="test" type=password name=passwd placeholder="Old password"/></td>
+				<td align=center colspan="2"><input class="test" type=password name=passwd placeholder="Old password" required/></td>
 				</tr>
 				<tr>
-					<td align=center colspan="2"><input class="test" type=password name="passwd_1" placeholder="New Password"/></td>
+					<td align=center colspan="2"><input class="test" type=password name="passwd_1" placeholder="New Password" required/></td>
 				</tr>
 				<tr>
-					<td align=center colspan="2"><input class="test" type=password name="passwd_2" placeholder="Please retype"/></td>
+					<td align=center colspan="2"><input class="test" type=password name="passwd_2" placeholder="Please retype" required/></td>
 				</tr>
 				<tr>
 				<td align=center colspan=2>

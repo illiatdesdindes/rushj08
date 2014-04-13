@@ -18,10 +18,10 @@
 					<td align=center id="title_td_index" colspan="2">Creation de compte</td>
 				</tr>
 				<tr>
-				<td align=center colspan="2"><input class="test" type=text name=login placeholder="Login desire"/></td>
+				<td align=center colspan="2"><input class="test" type=text name=login placeholder="Login desire" required/></td>
 				</tr>
 				<tr>
-					<td align=center colspan="2"><input class="test" type=password name=passwd placeholder="Password"/></td>
+					<td align=center colspan="2"><input class="test" type=password name=passwd placeholder="Password" required/></td>
 				</tr>
 				<tr>
 				<td align=center colspan=2>

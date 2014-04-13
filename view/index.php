@@ -22,10 +22,10 @@ $msg = "";
 					<td align=center id="title_td_index" colspan="2">Awesome Starships Battles II</td>
 				</tr>
 				<tr>
-				<td align=center colspan="2"><input class="test" type=text name="login" placeholder="Login"/></td>
+				<td align=center colspan="2"><input class="test" type=text name="login" placeholder="Login" required/></td>
 				</tr>
 				<tr>
-					<td align=center colspan="2"><input class="test" type=password name="passwd" placeholder="Password"/></td>
+					<td align=center colspan="2"><input class="test" type=password name="passwd" placeholder="Password" required/></td>
 				</tr>
 				<tr>
 					<td align=center colspan=2>
@@ -33,8 +33,11 @@ $msg = "";
 					</td>
 				</tr>
 				<tr>
+				</form>
+				<form method=POST action="/controller/index2.php">
 				<td align=center colspan=2>
 					<input type=submit name=submit value="Creer un compte"/>
+
 					</td>
 				</tr>
 			</table>	
