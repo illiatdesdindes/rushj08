@@ -14,6 +14,9 @@ include '../controller/check_login.php' ?>
 			<div 	class='ship' 
 					style='width:{{ship.width}};height:{{ship.height}};top:{{ship.top}};left:{{ship.left}};margin-bottom:{{-ship.height}}'
 					ng-click="select(ship)">
+				<div class="life">
+					<span style="width: {{ship.life}}%"></span>
+				</div>
 				{{ship.name}}
 			</div>
 		</div>

@@ -3,12 +3,39 @@
 require_once('ArmLn.class.php');
 
 abstract class Arm {
-	public	$name;
-	public	$loads;
-	public	$range_short;
-	public	$range_interm;
-	public	$range_long;
-	public	$effect_zone;
+
+	protected	$_name;
+	protected	$_loads;
+	protected	$_range;
+	protected	$_ship;
+	protected	$_range_short;
+	protected	$_range_interm;
+	protected	$_range_long;
+	protected	$_effect_zone;
+
+	public function fire($myShip, $ships) {
+		foreach($ships as $ship) {
+			if ($myShip != $ship) {
+				$this->hit($myShip, $ship);
+			}
+		}
+	}
+	public function hit($myShip, $foeShip) {
+		$dir = $myShip->getDirection();
+		foreach(range($this->_range[0], $this->_range[1]) as $i) {
+			if ($dir == Direction::$UP)
+				$hit = $foeShip->collide($myShip->getX(), $myShip->getY() - $i);
+			if ($dir == Direction::$RIGHT)
+				$hit = $foeShip->collide($myShip->getX() + $i, $myShip->getY());
+			if ($dir == Direction::$DOWN)
+				$hit = $foeShip->collide($myShip->getX(), $myShip->getY() + $i);
+			if ($dir == Direction::$LEFT)
+				$hit = $foeShip->collide($myShip->getX() - $i, $myShip->getY());
+			if ($hit)
+				$foeShip->takeDamage($this->_loads);
+		}
+	}
+
 }
 
 

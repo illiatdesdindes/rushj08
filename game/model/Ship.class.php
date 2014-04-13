@@ -13,22 +13,39 @@ abstract class Ship {
 	protected	$_name; 
 	protected	$_size;
 	protected	$_life;
+	protected	$_lifemax;
 	protected	$_power;
 	protected	$_speed;
 	protected	$_operate;
 	protected	$_shield;
-	protected	$_arms = [];
+	protected	$_arm;
 	protected	$_team ="blue";
+	protected	$_alive = true;
 
 
-	public function __construct($shipName, $x, $y, $direction, array $arms, $team) {
+	public function __construct($shipName, $x, $y, $direction, $team) {
 		$this->_id			= uniqid();
 		$this->_x			= $x;
 		$this->_y			= $y;
 		$this->_name		= $shipName;
-		$this->_arms		= $arms;
 		$this->setDirection($direction);
 		$this->_team 		= $team;
+	}
+
+	public function fire($ships) {
+		$this->_arm->fire($this, $ships);
+	}
+
+	public function collide($x, $y) {
+		return false;
+	}
+
+	public function takeDamage($damage) {
+		$this->_live -= $damage;
+		if ($this->_live <= 0) {
+			$this->_live = 0;
+			$this->_alive = false;
+		}	
 	}
 
 	public function draw() {
@@ -52,7 +69,9 @@ abstract class Ship {
 			'name' => $this->_name,
 			'id' => $this->_id,
 			'speed' => $this->_speed,
-			'move' => 0
+			'move' => 0,
+			'life' => round($this->_life / $this->_lifemax * 100),
+			'alive' => $this->_alive
 			];
 	}
 
