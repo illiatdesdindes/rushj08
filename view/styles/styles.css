@@ -19,3 +19,45 @@ p
 {
 	color:white;
 }
+.test
+{
+	padding:20px;
+	height:20px;
+	background:white;
+	border:none;
+	border-radius:5px;
+	line-height:24px;
+	font-size:1.5em;
+	color:#121212;
+}
+.menu-vertical-simple-2 
+{
+border: 1px solid #75A0B0;
+padding: 2px;
+background-color: #000000;
+width: 150px;
+height: auto;
+text-decoration: none;
+font-size: 20px;
+font-family: arial;
+text-align: center;
+position: relative;
+}
+.menu-vertical-simple-2 li
+ {
+margin-bottom: 0px;
+list-style-type: none;
+}
+.menu-vertical-simple-2 li a 
+{
+border: 1px solid #75A0B0;
+padding: 3px;
+text-decoration: none;
+color: #75A0B0;
+display: block;
+background-color: #0C313F;
+}
+.menu-vertical-simple-2 li a:hover 
+{
+background: #d40203;
+}

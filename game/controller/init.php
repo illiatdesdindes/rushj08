@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-
+include "../../controller/check_login.php";
 require_once('../model/Game.class.php');
 require_once('../model/ImperialFrigate.class.php');
 $game = new Game();
