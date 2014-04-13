@@ -25,7 +25,7 @@ include '../controller/check_login.php' ?>
 	
 		<div id="ctrl">
 			<h3>Selected Ship : {{selected.name}}</h3>
-			<form name="ctrl" action="index.php" method="post">
+			<form name="ctrl" action="" method="post">
 				<fieldset>
 		   			<legend>Direction</legend>
 					<input type="button" value="turn left" ng-click="turnleft(selected)"/>
