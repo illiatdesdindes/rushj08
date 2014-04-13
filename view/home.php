@@ -15,7 +15,7 @@
 
 		<ul class="menu-vertical-simple-2">
 				<li class="bouton_gauche"><a href="index.php">ACCUEIL</a></li>
-				<li class="bouton_gauche"><a href="../game/menu.php" target="_blank">NOUVELLE PARTIE</a></li>
+				<li class="bouton_gauche"><a href="../game/index.php" target="_blank">NOUVELLE PARTIE</a></li>
 				<li class="bouton_gauche"><a href="../view/chat.php">CHAT</a></li>
 				<li class="bouton_gauche"><a href="../controller/ChangePwd.class.php">MODIF MDP</a></li>
 				<li class="bouton_gauche"><a href="../controller/deco.php">DECO</a></li>
