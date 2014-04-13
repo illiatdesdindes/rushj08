@@ -19,8 +19,8 @@
 
 			</ul>
 			<div align=center>
-			<iframe name="chat" src="../controller/chat.php" width="70%" height="550px"></iframe>
-	<iframe name="speak" src="../controller/speak.php" width="70%" height="50px"></iframe>
+			<iframe name="chat" src="../controller/chat.php" width="70%" height="550px" style="background-color:white"></iframe>
+	<iframe name="speak" src="../controller/speak.php" width="70%" height="50px" style="background-color:white"></iframe>
 	</div>
 	</body>
 </html>

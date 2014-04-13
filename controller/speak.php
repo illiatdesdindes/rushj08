@@ -1,5 +1,6 @@
 <?php session_start();
 date_default_timezone_set('Europe/Paris');
+$to_lock = fopen("chat","a");
 if ($_SESSION['id_user'] != "" OR $_SESSION OR $_SESSION == TRUE){
 	if (isset($_POST['msg']) AND $_POST['msg'] != ""){
 		$moment = time();

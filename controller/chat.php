@@ -1,6 +1,7 @@
 <?php session_start();
-if (!file_exists(chat))
+if (!file_exists("chat"))
 touch("chat");
+$to_lock = fopen("chat","r");
 if (file_get_contents("chat") != FALSE){
 		flock($to_lock, LOCK_SH );
 		$ret = file_get_contents("chat");
