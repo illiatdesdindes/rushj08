@@ -38,6 +38,17 @@ class Game {
 		return $this->_ships;
 	}
 	
+	public function getShipId($id){
+		$tab1 = $this->getShips();
+		foreach ($tab1 as $value1){
+			foreach ($value1 as $value2){
+				if ($value2 == $id){
+					$arr[] = $value1;
+					return ($arr);
+				}
+			}
+		}
+	}
 }
 
 ?>

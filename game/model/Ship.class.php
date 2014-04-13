@@ -42,6 +42,7 @@ abstract class Ship {
 			</div>
 		";
 	}
+
 	public function toHash() {
 		$width = $this->_size[0] * (11 + 1) - 1;
 		$height = $this->_size[1] * (11 + 1) - 1;
