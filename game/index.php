@@ -22,18 +22,13 @@
 		?>
 	
 		<div id="ctrl">
-			<div id="de">
-				<form name="dice" action="index.php" method="post">
-					<fieldset>
-						<legend>Dice</legend>
-						<input type="submit" name="dice" value="go">
-					</fieldset>
-				</form>
-			</div>
+			<h3>Selected Ship : {{selected.name}}</h3>
 			<form name="ctrl" action="index.php" method="post">
 				<fieldset>
 		   			<legend>Direction</legend>
-		   			<input type="range" >
+					<input type="button" value="turn left" ng-click="turnleft(selected)"/>
+		   			<input type="range" max="{{selected.speed}}" ng-model="selected.move"> {{selected.move}}
+					<input type="button" value="turn right" ng-click="turnright(selected)"/>
 
 	 			</fieldset>
 			</form>

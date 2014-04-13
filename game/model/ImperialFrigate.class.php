@@ -9,8 +9,8 @@ class ImperialFrigate extends Ship {
 	public function __construct($shipName, $x, $y, $direction, array $arms, $team="blue") {
 		$this->_size	= array(3, 5);
 		$this->_direction = Direction::$DOWN;
-		$this->_hull	= 5;
-		$this->_pp 		= 10;
+		$this->_life	= 5;
+		$this->_power	= 10;
 		$this->_speed	= 15;
 		$this->_operate	= 4;
 		$this->_shield	= 0;

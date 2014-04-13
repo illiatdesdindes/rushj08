@@ -5,16 +5,34 @@ class Game {
 
 	private	$_x;
 	private	$_y;
-	private	$_objects = [];
+	private	$_ships = [];
 
-	public function __construct($x, $y, array $objects) {
-		$this->_x = $x;
-		$this->_y = $y;
-		$this->_objects = $objects;
+	public function __construct(array $ships = []) {
+		if (isset($_SESSION['ships']) && $_SESSION['ships'] !== [])
+			$this->sessionLoad();
+		else
+			$this->_ships = $ships;
+		$this->_x = 150;
+		$this->_y = 100;
 	}
 
-	public function push(Ship $object) {
-		$this->_objects[] = array($x, $y, $object);
+	public function push(Ship $ship) {
+		$this->_ships[] = $ship;
+	}
+	public function rmId($shipId) {
+		
+	}
+	public function sessionLoad() {
+		$this->_ships = $_SESSION['ships'];
+	}
+	public function sessionSave() {
+		$_SESSION['ships'] = $this->_ships;
+	}
+	public function toHash() {
+		$shipsHash = [];
+		foreach($this->_ships as $ship)
+			$shipsHash[] = $ship->toHash();
+		return $shipsHash;
 	}
 }
 
