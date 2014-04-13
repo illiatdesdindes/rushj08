@@ -35,6 +35,23 @@ abstract class Ship {
 	public function getId() {
 		return $this->_id;
 	}
+public function moveForward($nbr){
+$dir = $this->_direction;
+if ($dir == self::$UP)
+$this->_y -= $nbr;
+else if ($dir == self::$DOWN)
+$this->_y +=  $nbr;
+	else if ($dir == self::$RIGHT)
+$this->_x +=  $nbr;
+		else if ($dir == self::$LEFT)
+$this->_x -=  $nbr;
+if ($this->_x < 0 OR $this->_x > 150 OR $this->_y < 0 OR $this->_y > 100){
+	$this->_life = 0;
+	$this->_alive = false;
+}
+
+}
+
 
 	public function fire($ships) {
 		$this->_arm->fire($this, $ships);

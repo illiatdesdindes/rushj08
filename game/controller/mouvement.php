@@ -7,12 +7,13 @@ $ret = (json_decode($ret, true));
 $game = new Game();
 $ship = $game->getShipId($ret['id']);
 
-if ($ret['turn'] == 'right')
+if ($ret['turn'] == "right")
 	$ship->turnRight();
-else if ($ret['turn'] == 'left')
+else if ($ret['turn'] == "left")
 	$ship->turnLeft();
+print_r($ret);
 $ship->moveForward($ret['distance']);
-
+print_r($ship);
 echo $ship->toHash();
 
 ?>
