@@ -39,5 +39,9 @@ class Grid{
 		}
 	 	
 	}
+	public static function doc(){
+		echo file_get_contents('Grid.doc.txt');
+		return ;
+	}
 }
 ?>

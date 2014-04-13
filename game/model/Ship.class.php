@@ -96,7 +96,10 @@ if ($this->_x < 0 OR $this->_x > 150 OR $this->_y < 0 OR $this->_y > 100){
 			'alive' => $this->_alive
 			];
 	}
-
+	public static function doc(){
+		echo file_get_contents('Ship.doc.txt');
+		return ;
+	}
 }
 
 /*

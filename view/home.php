@@ -11,6 +11,7 @@
 	</head>
 	<body>
 
+	<div id="title">Awesome Starships Battles II</div>
 
 		<ul class="menu-vertical-simple-2">
 				<li class="bouton_gauche"><a href="index.php">ACCUEIL</a></li>

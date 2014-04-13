@@ -1,0 +1,6 @@
+<-- ImperialFrigate ------------------------------------------------
+
+The ImperialFrigate Class determines the specifications of the 
+Imperial fleet.
+
+------------------------------------------------ ImperialFrigates -->

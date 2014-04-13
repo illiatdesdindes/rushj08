@@ -1,0 +1,10 @@
+<-- Direction -------------------------------------------->
+The Direction trait permits the ships to move. the 
+available methods are :
+ - turnRight
+ - turnLeft
+ - getDirection
+ - setDirection
+ - getHalfX
+ - getHalfY
+ --------------------------------------------- Direction -->

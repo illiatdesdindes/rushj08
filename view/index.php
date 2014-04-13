@@ -13,13 +13,11 @@ $msg = "";
 		<title>Awesome Starships Battles II</title>
 	</head>
 	<body>
-		<form method=POST action="/controller/index2.php">
-			<table border=0 align=center style="margin-top: 15%;">
-						<tr>
-					<td align=center id="title_td_index" colspan="2"><?php echo $msg;?></td>
-				</tr>
+	<div id="title">Awesome Starships Battles II</div>
+	<form class="login" method=POST action="/controller/index2.php">
+			<table>
 				<tr>
-					<td align=center id="title_td_index" colspan="2">Awesome Starships Battles II</td>
+					<td align=center id="title_td_index" colspan="2"><?php echo $msg;?></td>
 				</tr>
 				<tr>
 				<td align=center colspan="2"><input class="test" type=text name="login" placeholder="Login" required/></td>

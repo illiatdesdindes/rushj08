@@ -18,6 +18,10 @@ class ImperialFrigate extends Ship {
 		$this->_arm		= new ArmLn($this);
 		parent::__construct($shipName, $x, $y, $direction, $team);
 	}
+	public static function doc(){
+		echo file_get_contents('ImperialFrigate.doc.txt');
+		return ;
+	}
 }
 
 ?>
