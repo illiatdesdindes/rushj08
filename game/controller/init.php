@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-
+ include "../controller/check_login.php";
 require_once('../model/ImperialFrigate.class.php');
 $ship = new ImperialFrigate('Hammer justice', 4, 1, Direction::$LEFT, []);
 $ship2 = new ImperialFrigate('truc mush', 4, 6, Direction::$DOWN, []);

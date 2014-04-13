@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?PHP include "../controller/check_login.php"?>
 <!DOCTYPE html>
 <html>
 	<head>

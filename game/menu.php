@@ -1,4 +1,4 @@
-<?PHP session_start()?>
+<?PHP include "../controller/check_login.php"?>
 <html>
 	<head>
 		<meta name="description" content="Rush01 Piscine PHP">

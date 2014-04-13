@@ -32,7 +32,7 @@ p
 }
 .menu-vertical-simple-2 
 {
-border: 1px solid #d40203;
+border: 1px solid #75A0B0;
 padding: 2px;
 background-color: #000000;
 width: 150px;
@@ -50,12 +50,12 @@ list-style-type: none;
 }
 .menu-vertical-simple-2 li a 
 {
-border: 1px solid #d40203;
+border: 1px solid #75A0B0;
 padding: 3px;
 text-decoration: none;
-color: #000000;
+color: #75A0B0;
 display: block;
-background-color: #f1f1f1;
+background-color: #0C313F;
 }
 .menu-vertical-simple-2 li a:hover 
 {
