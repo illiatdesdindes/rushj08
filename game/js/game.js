@@ -13,14 +13,23 @@ game.controller('ShipsCtrl', function($scope, $http, $sce){
 			});
 	$scope.select = function(ship) {
 		$scope.selected = ship;
-		$scope.selected.activated
+		$scope.selected.activated = true;
 	};
 	$scope.turnright = function(ship) {
-		
+		if (!$scope.selected.turn)
+			$scope.selected.turn = "right";
+	};
+	$scope.turnleft = function(ship) {
+		if (!$scope.selected.turn)
+			$scope.selected.turn = "left";
 	};
 	$scope.move = function(ship) {
-		var data = {id:ship.id, turn:"left", distance: ship.move};
+		var data = {id:ship.id, turn:ship.turn, distance: ship.move};
 		$http.post('/game/controller/mouvement.php', data)
 				.success();
+	};
+	$scope.fire = function(ship) {
+		var data = {id:ship.id, fire:true};
+		$http.post('/game/controller/fire.php', data);
 	};
 });

@@ -22,17 +22,28 @@
 			$grid->draw();
 		?>
 	
-		<div id="ctrl">
+		<div id="ctrl" ng-show="selected.id">
 			<h3>Selected Ship : {{selected.name}}</h3>
 			<form name="ctrl" action="index.php" method="post">
 				<fieldset>
-		   			<legend>Direction</legend>
+					<legend>Direction</legend>
+					<h4>
+						<span ng-show="selected.turn">Turn {{selected.turn}} and</span> 
+						Move forward {{selected.move}}
+					</h4>
 					<input type="button" value="turn left" ng-click="turnleft(selected)"/>
-		   			<input type="range" max="{{selected.speed}}" ng-model="selected.move"> {{selected.move}}
+		   			<input type="range" max="{{selected.speed}}" ng-model="selected.move">
 					<input type="button" value="turn right" ng-click="turnright(selected)"/>
 					<input type="button" value="MOVE" ng-click="move(selected)"/>
 
 	 			</fieldset>
+			</form>
+			<form>
+				<fieldset>
+					<legend>Fire</legend>
+					<h4>Do you want to fire ?</h4>
+					<input type="button" value="FIRE" ng-click="fire(selected)"/>
+				</fieldset>
 			</form>
 		</div>
 	</div>
