@@ -30,6 +30,7 @@
 					<input type="button" value="turn left" ng-click="turnleft(selected)"/>
 		   			<input type="range" max="{{selected.speed}}" ng-model="selected.move"> {{selected.move}}
 					<input type="button" value="turn right" ng-click="turnright(selected)"/>
+					<input type="button" value="MOVE" ng-click="move(selected)"/>
 
 	 			</fieldset>
 			</form>
