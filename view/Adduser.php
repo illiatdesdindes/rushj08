@@ -1,7 +1,3 @@
-<?php 
-if (!isset($msg))
-$msg = "";
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,28 +9,23 @@ $msg = "";
 		<title>Awesome Starships Battles II</title>
 	</head>
 	<body>
-		<form method=POST action="/controller/index2.php">
+		<form method=POST action="../controller/Adduser.class.php">
 			<table border=0 align=center style="margin-top: 15%;">
-						<tr>
+			<tr>
 					<td align=center id="title_td_index" colspan="2"><?php echo $msg;?></td>
 				</tr>
 				<tr>
-					<td align=center id="title_td_index" colspan="2">Awesome Starships Battles II</td>
+					<td align=center id="title_td_index" colspan="2">Creation de compte</td>
 				</tr>
 				<tr>
-				<td align=center colspan="2"><input class="test" type=text name="login" placeholder="Login"/></td>
+				<td align=center colspan="2"><input class="test" type=text name=login placeholder="Login desire"/></td>
 				</tr>
 				<tr>
-					<td align=center colspan="2"><input class="test" type=password name="passwd" placeholder="Password"/></td>
-				</tr>
-				<tr>
-					<td align=center colspan=2>
-						<input type=submit name=submit value="Se connecter"/>
-					</td>
+					<td align=center colspan="2"><input class="test" type=password name=passwd placeholder="Password"/></td>
 				</tr>
 				<tr>
 				<td align=center colspan=2>
-					<input type=submit name=submit value="Creer un compte"/>
+					<input type=submit name=create value="Creer le compte"/>
 					</td>
 				</tr>
 			</table>	

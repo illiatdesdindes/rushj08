@@ -1,9 +1,4 @@
-<?php session_start();
-$msg = "";
-if ($_POST['submit'] == "Creer un compte")
-header ('Location: ../controller/Adduser.class.php');
-if ($_POST['submit'] == "Se connecter"){
-
+<?php
 	class User
 	{
 		private $_User_login;
@@ -13,7 +8,6 @@ if ($_POST['submit'] == "Se connecter"){
 //Constructeur
 		public function hydrate($donnees)
 		{
-
 			foreach ($donnees as $value)
 			{
 				$method = 'set'.$value;
@@ -49,43 +43,25 @@ public function getUser_login()
 		}
 		
 	}
-
-
-
-
-$db = new PDO('mysql:host=localhost;dbname=warhammer', 'WARHAMMER', 'passwordd', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+$msg = "";
+	if (isset($_POST) AND isset($_POST['create']) AND $_POST['create'] == "Creer le compte"){
+	$db = new PDO('mysql:host=localhost;dbname=warhammer', 'WARHAMMER', 'passwordd', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 	include_once ('../model/Adduser.class.php');
 	$managerUser = new Adduser($db);
 	$NouvUser = new User();
-	$tab = array('User_login','User_pass');
+	$tab = array("User_login","User_pass");
 	$NouvUser->hydrate($tab);
-	$ret = $managerUser->login($NouvUser);
-	if (isset($ret[0]) AND $ret[0]['user_login'] == $NouvUser->getUser_login() AND $ret[0]['user_pass'] == $NouvUser->getUser_pass()) {
-		$_SESSION['id_user']=$ret[0]['id_user'];
-		$_SESSION['user_login']=$ret[0]['user_login'];
-			header("Location: ../view/home.php");
+	$ret = $managerUser->test_login($NouvUser);
+	if (empty($ret) == TRUE ) {
+		$managerUser->add($NouvUser);
+			header("Location: ../index.php");
 	}
 	else{
-		$msg = "ERREUR AUTHENTIFICATION";
+		$msg = "LOGIN DEJA EXISTANT";
 	}
-
+	
 	}
-include ("../view/index.php");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+include ("../view/Adduser.php");
 
 ?>
