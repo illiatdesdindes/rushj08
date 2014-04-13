@@ -17,13 +17,15 @@ abstract class Ship {
 	protected	$_operate;
 	protected	$_shield;
 	protected	$_arms = [];
+	protected	$_team ="blue";
 
-	public function __construct($shipName, $x, $y, $direction, array $arms) {
+	public function __construct($shipName, $x, $y, $direction, array $arms, $team) {
 		$this->_x			= $x;
 		$this->_y			= $y;
 		$this->_name		= $shipName;
 		$this->_arms		= $arms;
 		$this->setDirection($direction);
+		$this->_team 		= $team;
 	}
 
 	public function draw() {
