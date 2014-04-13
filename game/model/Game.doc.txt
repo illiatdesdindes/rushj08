@@ -1,0 +1,10 @@
+<-- Game ------------------------------------------------------------------------
+The Game Class handle the creation of the users ships, the method availlable are:
+ - push
+ - rmId
+ - sessionLoad
+ - sessionSave
+ - toHash
+ - getShip
+
+ ------------------------------------------------------------------------- Game -->

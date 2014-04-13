@@ -1,0 +1,8 @@
+<-- Ship --------------------------------------------------------------
+
+The Ship Class creates the differentes ships of a fleet, the available
+methods are :
+ - draw 
+ - to hash 
+
+ ------------------------------------------------------------- Ship -->
