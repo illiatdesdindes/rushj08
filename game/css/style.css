@@ -1,6 +1,6 @@
 
 body {
-	background-color: #fff;
+	background-image:url('/view/img/back.jpg');
 	/*font-family: 'Brush Script MT', Arial;*/
 	cursor: default;
 }
@@ -13,8 +13,8 @@ body {
 .ship {
 	z-index:10;
 	position:relative;
-	background-color: #c0392b;
-	box-shadow: 0px 0px 10px #c0392b;
+	background-color: #0c313f;
+	box-shadow: 0px 0px 10px #609ab0;
 }
 #game {
 	overflow: hidden;
@@ -30,6 +30,7 @@ body {
 	height: 11px;
 	background-color: rgba(189, 195, 199, 1);
 	border-right: 1px solid grey;
+	opacity:0.3;
 }
 #game div.cadre div {
 	float: left;
@@ -56,37 +57,7 @@ body {
 	background-color: #2980b9;
 	box-shadow: 0px 0px 10px #2980b9;
 }
-#ctrl {
-	position: fixed;
-	bottom: 2rem;
-	right: 2.5rem;
-	opacity: 0.75;
-	font-size: 1.5rem;
-	width: 450px;
-	height: 9.7rem;
-	margin: 0 auto;
-	padding: 0.5rem 1rem 1.3rem 1.5rem;
-	border: 2px solid #ddd;
-	box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.5);
-	box-sizing: border-box;
-	border-radius: 1rem;
-	background-image: url('http://www.twitterevolutions.com/bgs/ice-hockey-twitter-background.jpg');
-	background-position: center left;
+form{
+color:#75A0B0;
 }
-#ctrl #add {
-	float: right;
-	width: 7rem;
-	padding-bottom: 3rem;
-	text-align: center;
-}
-#ctrl #add div {
-	width: 100%;
-	padding: 0rem 0 0.5rem;
-	text-align: center;
-}
-#ctrl img {
-	vertical-align: middle;
-}
-#ctrl img:nth-child(1) {
-	margin-top: 0.7rem;
-}
+

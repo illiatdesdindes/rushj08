@@ -15,25 +15,51 @@
 	$ship->draw();
 	$ship2->draw();
 	$grid->draw();
-	?>	
-	<div id="ctrl">
-			<img src="images/arrow.png" usemap="ctrlmap" />
-			<div id="add">
-				<div>
-					Move<br />
-					<img src="images/less.png" onclick="Add(0, 0, this);" />
-					<span>1</span>
-					<img src="images/more.png" onclick="Add(0, 1, this);" />
-				</div>
-				<div>
-					Shield<br />
-					<img src="images/less.png" onclick="Add(1, 0, this);" />
-					<span>1</span>
-					<img src="images/more.png" onclick="Add(1, 1, this);" />
-				</div>
-			</div>
+	?>
+	<div id="de">
+	<form name="dice" action="index.php" method="post">
+<fieldset>
+<legend>Dice</legend>
+<input type="submit" name="dice" value="go">
+</fieldset>
+	</form>
+	<?php
+	if (isset($_POST['dice']) == "de")
+		echo mt_rand(1,6);
+	?>
+	</div>
+
+<form name="ctrl" action="index.php" method="post">
+<fieldset>
+       <legend>Direction</legend>
+
+       <label for="devant">------- ^ --------</label><br/>
+       <label for="left"> < </label>
+       <input type="radio" name="direction" id="left" />
+
+       <input type="radio" name="direction" id="avance" />
+ 
+       <input type="radio" name="direction" id="right" />
+       <label for="right"> > </label>
+
+ </fieldset>
+<fieldset>
+       <legend>Move</legend>
+
+       <label for="less"> - </label>
+       <input type="submit" name="less" id="less" />
+       <label for="more"> + </label>
+       <input type="radio" name="direction" id="right" />
+ </fieldset>
+<fieldset>
+       <legend>Move</legend>
+ 
+
+</fieldset>
+
+ 
+</form>
 		</div>
-		<map id="ctrlmap" name="ctrlmap">
 			<area shape="rect" alt="Up" coords="42,0,76,44" />
 			<area shape="rect" alt="Left" coords="0,44,43,76" />
 			<area shape="rect" alt="Right" coords="75,44,120,76" />

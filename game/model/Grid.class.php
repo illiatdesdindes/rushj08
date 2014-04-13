@@ -1,5 +1,5 @@
 <?PHP
-require_once "php/Cell.class.php";
+require_once "model/Cell.class.php";
 class Grid{
 	static $_index = array();
 	static $_fixobjects = array();
