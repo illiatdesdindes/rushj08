@@ -1,5 +1,7 @@
 <?php
 
+require_once('ImperialFrigate.class.php');
+
 class Game {
 
 	private	$_x;
@@ -38,6 +40,13 @@ class Game {
 		return $this->_ships;
 	}
 	
+	public function getShipId($id){
+		$ships = $this->getShips();
+		foreach ($ships as &$ship){
+			if ($id == $ship->getId())
+					return ($ship);
+		}
+	}
 }
 
 ?>
