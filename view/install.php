@@ -16,28 +16,28 @@
 <td style="color:white;">
 Login de l'administrateur de MySQL :
 </td><td>
-<input type="text" name="log_adm_bdd"><br />
+<input type="text" name="log_adm_bdd"  required ><br />
 </td>
 </tr>
 <tr>
 <td style="color:white;">
 Mot de passe de l'administrateur :
 </td><td>
-<input type="password" name="passwd_adm_bdd"><br />
+<input type="password" name="passwd_adm_bdd"  required><br />
 </td>
 </tr>
 <tr>
 <td style="color:white;">
 Port de MySQL (si different de 3306):
 </td><td>
-<input type="text" name="mysql_socket" value="3306"><br />
+<input type="text" name="mysql_socket" value="3306" required><br />
 </td>
 </tr>
 <tr>
 <td style="color:white;">
 Adresse du serveur MySQL (si different de localhost):
 </td><td>
-<input type="text" name="mysql_serv" value="localhost"><br />
+<input type="text" name="mysql_serv" value="localhost" required><br />
 </td>
 </tr>
 <tr align=center>

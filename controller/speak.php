@@ -5,19 +5,19 @@ if ($_SESSION['id_user'] != "" OR $_SESSION OR $_SESSION == TRUE){
 		$moment = time();
 		$user = $_SESSION['user_login'];
 		$msg = $_POST['msg'];
-		if (file_get_contents("private/chat") == FALSE){
+		if (file_get_contents("chat") == FALSE){
 		$tab['login'] = $user;
 		$tab['time'] = $moment;
 		$tab['msg'] = $msg;
 		$ret[] = $tab;
-		$to_lock = fopen("private/chat");
+		$to_lock = fopen("chat");
 		flock($to_lock, LOCK_SH | LOCK_EX);
-		file_put_contents("private/chat", serialize($ret));
+		file_put_contents("chat", serialize($ret));
 		flock($to_lock, LOCK_UN);
 		}
 		else{
 		flock($to_lock, LOCK_SH | LOCK_EX);
-			$ret = file_get_contents("private/chat");
+			$ret = file_get_contents("chat");
 		flock($to_lock, LOCK_UN);
 			$ret_2 = unserialize($ret);
 		$tab['login'] = $user;
@@ -25,7 +25,7 @@ if ($_SESSION['id_user'] != "" OR $_SESSION OR $_SESSION == TRUE){
 		$tab['msg'] = $msg;
 		$ret_2[] = $tab;
 		flock($to_lock, LOCK_SH | LOCK_EX);
-		file_put_contents("private/chat", serialize($ret_2));
+		file_put_contents("chat", serialize($ret_2));
 		flock($to_lock, LOCK_UN);
 		}
 	}
