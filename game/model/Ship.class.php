@@ -107,7 +107,8 @@ abstract class Ship {
 			'speed' => $this->_speed,
 			'move' => 0,
 			'life' => round($this->_life / $this->_lifemax * 100),
-			'alive' => $this->_alive
+			'alive' => $this->_alive,
+			'team' => $this->_team
 			];
 	}
 	public static function doc(){

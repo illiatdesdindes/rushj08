@@ -12,7 +12,7 @@ include '../controller/check_login.php' ?>
 	<a href="reset.php" style="text-align:center:color:grey;">reset game</a>
 	<div id="game" ng-controller='ShipsCtrl'>
 		<div ng-repeat="ship in ships" >
-			<div 	class='ship' ng-class="{dead:!ship.alive}"
+			<div 	class='ship {{ship.team}}' ng-class="{dead:!ship.alive}"
 					style='width:{{ship.width}};height:{{ship.height}};top:{{ship.top}};left:{{ship.left}};margin-bottom:{{-ship.height}}'
 					ng-click="select(ship)">
 				<div class="life">

@@ -9,6 +9,7 @@ $game = new Game([
 		new ImperialFrigate('Hammer justice', 4, 1, Direction::$RIGHT),
 		new ImperialFrigate('truc mush', 4, 6, Direction::$DOWN),
 		new ImperialFrigate('Machin', 10, 2, Direction::$DOWN),
+		new ImperialFrigate('Hammer fist', 148, 90, Direction::$UP, 'red'),
 ]);
 
 echo json_encode($game->toHash());
