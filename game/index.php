@@ -1,3 +1,4 @@
+<?php include '../controller/check_login.php' ?> 
 <html ng-app='game'>
 <head>
 	<title>Awesome Starships Battles II</title>

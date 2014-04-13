@@ -1,3 +1,4 @@
+<?PHP include "../controller/check_login.php"?>
 <!DOCTYPE html>
 <html>
 	<head>
